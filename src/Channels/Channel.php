@@ -31,7 +31,7 @@ class Channel
     public function send($notifiable, Notification $notification):void
     {
         if ($notifiable instanceof Model) {
-            $to = $notifiable->routeNotificationForEasySms($notification);
+            $to = $notifiable->routeNotificationForSMS($notification);
         } elseif ($notifiable instanceof AnonymousNotifiable) {
             $to = $notifiable->routes[__CLASS__];
         }
