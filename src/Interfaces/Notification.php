@@ -13,7 +13,7 @@
 namespace MuCTS\LaravelSMS\Interfaces;
 
 
-use MuCTS\LaravelSMS\Messages\Message;
+use MuCTS\SMS\Interfaces\Message;
 
 interface Notification
 {
