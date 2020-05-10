@@ -14,9 +14,8 @@ return [
     "timeout" => env('SMS_TIMEOUT', 5),// HTTP 请求的超时时间（秒）
     "default" => [
         "strategy" => MuCTS\SMS\Strategies\Order::class,// 网关调用策略，默认：顺序调用
-        "gateways" => [// 默认可用的发送网关
-            "ali_yun", "lang_ma"
-        ]
+        // 默认可用的发送网关，多个逗号","隔开
+        'gateways' => env('SMS_default.gateways','ali_yun'),
     ],
     "gateways" => [// 可用的网关配置
         "ali_yun" => [
