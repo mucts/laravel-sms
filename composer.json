@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MuCTS\\SMS\\Providers\\ServiceProvider"
+                "MuCTS\\LaravelSMS\\Providers\\ServiceProvider"
             ],
             "aliases": {
-                "SMS": "MuCTS\\SMS\\Facades\\SMS"
+                "SMS": "MuCTS\\LaravelSMS\\Facades\\SMS"
             }
         }
     }
