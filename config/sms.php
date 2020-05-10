@@ -15,7 +15,7 @@ return [
     "default" => [
         "strategy" => MuCTS\SMS\Strategies\Order::class,// 网关调用策略，默认：顺序调用
         // 默认可用的发送网关，多个逗号","隔开
-        'gateways' => env('SMS_default.gateways','ali_yun'),
+        'gateways' => env('SMS_DEFAULT_GATEWAYS','ali_yun'),
     ],
     "gateways" => [// 可用的网关配置
         "ali_yun" => [
