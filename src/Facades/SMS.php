@@ -20,6 +20,7 @@ use MuCTS\SMS\SMS as Accessor;
  * Class SMS
  *
  * @mixin Accessor
+ * @method static array send($mobile, $message, array $gateways = [])
  * @package MuCTS\LaravelSMS\Facades
  */
 class SMS extends Facade

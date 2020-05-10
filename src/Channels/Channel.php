@@ -14,8 +14,9 @@ namespace MuCTS\LaravelSMS\Channels;
 
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\AnonymousNotifiable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use MuCTS\LaravelSMS\Facades\SMS;
 use MuCTS\LaravelSMS\Interfaces\Notification;
 
@@ -24,18 +25,31 @@ class Channel
     /**
      * Send the sms notification.
      *
-     * @param $notifiable
+     * @param Notifiable|AnonymousNotifiable $notifiable
      * @param Notification $notification
      * @throws Exception
      */
-    public function send($notifiable, Notification $notification):void
+    public function send($notifiable, Notification $notification): void
     {
-        if ($notifiable instanceof Model) {
-            $to = $notifiable->routeNotificationForSMS($notification);
+        $to = null;
+        $message = $notification->toSMS($notifiable);
+        if (!$message) {
+            return;
+        }
+        if (method_exists($notifiable, 'routeNotificationFor')) {
+            $to = $notifiable->routeNotificationFor($message->getDriver(), $notification);
+        } elseif (method_exists($notifiable, $method = 'routeNotificationFor' . Str::studly($message->getDriver()))) {
+            $to = $notifiable->{$method}($notification);
         } elseif ($notifiable instanceof AnonymousNotifiable) {
             $to = $notifiable->routes[__CLASS__];
         }
-        $message = $notification->toSMS($notifiable);
-        SMS::send($to, $message);
+        if (!$to) {
+            return;
+        }
+        try {
+            SMS::send($to, $message);
+        } catch (Exception $exception) {
+            $message->error($exception->getMessage(), $exception->getCode(), $exception->getPrevious());
+        }
     }
 }

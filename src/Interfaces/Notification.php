@@ -13,9 +13,9 @@
 namespace MuCTS\LaravelSMS\Interfaces;
 
 
-use MuCTS\SMS\Interfaces\Message;
+use MuCTS\LaravelSMS\Messages\Message;
 
 interface Notification
 {
-    public function toSMS($notifiable): Message;
+    public function toSMS($notifiable): ?Message;
 }
