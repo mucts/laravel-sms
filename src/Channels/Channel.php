@@ -10,15 +10,15 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelSMS\Channels;
+namespace MuCTS\Laravel\SMS\Channels;
 
 
 use Exception;
 use Illuminate\Notifications\AnonymousNotifiable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
-use MuCTS\LaravelSMS\Facades\SMS;
-use MuCTS\LaravelSMS\Interfaces\Notification;
+use MuCTS\Laravel\SMS\Facades\SMS;
+use MuCTS\Laravel\SMS\Interfaces\Notification;
 
 class Channel
 {

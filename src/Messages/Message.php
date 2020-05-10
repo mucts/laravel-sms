@@ -10,7 +10,7 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelSMS\Messages;
+namespace MuCTS\Laravel\SMS\Messages;
 
 
 use Exception;

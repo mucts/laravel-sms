@@ -10,7 +10,7 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelSMS\Facades;
+namespace MuCTS\Laravel\SMS\Facades;
 
 
 use Illuminate\Support\Facades\Facade;
@@ -21,7 +21,7 @@ use MuCTS\SMS\SMS as Accessor;
  *
  * @mixin Accessor
  * @method static array send($mobile, $message, array $gateways = [])
- * @package MuCTS\LaravelSMS\Facades
+ * @package MuCTS\Laravel\SMS\Facades
  */
 class SMS extends Facade
 {

@@ -17,10 +17,10 @@ namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use MuCTS\LaravelSMS\Channels\Channel as SMSChannel;
-use MuCTS\LaravelSMS\Interfaces\Notification as SMSNotification;
+use MuCTS\Laravel\SMS\Channels\Channel as SMSChannel;
+use MuCTS\Laravel\SMS\Interfaces\Notification as SMSNotification;
 use MuCTS\SMS\Interfaces\Message as MessageInterface;
-use MuCTS\LaravelSMS\Messages\Message;
+use MuCTS\Laravel\SMS\Messages\Message;
 class VerificationCode extends Notification implements SMSNotification
 {
     use Queueable;

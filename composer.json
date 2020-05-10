@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MuCTS\\LaravelSMS\\": "src/"
+            "MuCTS\\Laravel\\SMS\\": "src/"
         }
     },
     "license": "MIT",
@@ -25,10 +25,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MuCTS\\LaravelSMS\\Providers\\ServiceProvider"
+                "MuCTS\\Laravel\\SMS\\Providers\\ServiceProvider"
             ],
             "aliases": {
-                "SMS": "MuCTS\\LaravelSMS\\Facades\\SMS"
+                "SMS": "MuCTS\\Laravel\\SMS\\Facades\\SMS"
             }
         }
     }

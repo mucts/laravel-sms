@@ -10,7 +10,7 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelSMS\Providers;
+namespace MuCTS\Laravel\SMS\Providers;
 
 use Illuminate\Support\ServiceProvider as Provider;
 use MuCTS\SMS\SMS;

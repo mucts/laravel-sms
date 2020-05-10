@@ -10,10 +10,10 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelSMS\Interfaces;
+namespace MuCTS\Laravel\SMS\Interfaces;
 
 
-use MuCTS\LaravelSMS\Messages\Message;
+use MuCTS\Laravel\SMS\Messages\Message;
 
 interface Notification
 {
