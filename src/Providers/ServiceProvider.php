@@ -12,10 +12,11 @@
 
 namespace MuCTS\Laravel\SMS\Providers;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as Provider;
 use MuCTS\SMS\SMS;
 
-class ServiceProvider extends Provider
+class ServiceProvider extends Provider implements DeferrableProvider
 {
     public function register()
     {
