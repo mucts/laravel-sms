@@ -1,6 +1,11 @@
 # Laravel SMS
 > SMS for Laravel 7,based on [mucts/sms](https://github.com/mucts/sms)
 
+[![Latest Stable Version](https://poser.pugx.org/mucts/laravel-sms/v/stable.svg)](https://packagist.org/packages/mucts/laravel-sms) 
+[![Total Downloads](https://poser.pugx.org/mucts/laravel-sms/downloads.svg)](https://packagist.org/packages/mucts/laravel-sms) 
+[![Latest Unstable Version](https://poser.pugx.org/mucts/laravel-sms/v/unstable.svg)](https://packagist.org/packages/mucts/laravel-sms) 
+[![License](https://poser.pugx.org/mucts/laravel-sms/license.svg)](https://packagist.org/packages/mucts/laravel-sms)
+
 ## Install
 
 ~~~shell
